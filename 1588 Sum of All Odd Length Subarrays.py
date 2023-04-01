@@ -1,5 +1,17 @@
 def sumOddLengthSubarrays(arr):
-    x = len(arr) +1
+    sum = 0
+    n = len(arr)
+
+    for i in range(n):
+        total = (n - i) * (i + 1)
+        odd = (total + 1) / 2
+        sum += (odd * arr[i])
+
+    return sum
+
+    # https://youtu.be/J5IIH35EBVE
+
+    """x = len(arr) +1
     sum=0
     #es una respuesta lenta pero válida. se puede sumar en rango... 
     def sumarelementos(sum, arr, z):
@@ -17,4 +29,4 @@ def sumOddLengthSubarrays(arr):
     return sum
 
 intento = [10,11,12,13]
-print(sumOddLengthSubarrays(intento))
+print(sumOddLengthSubarrays(intento))"""
