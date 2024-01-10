@@ -3,13 +3,9 @@ import pytest
 # from .solution import *
 
 
-class Test661:
-    def test_avg(self):
-        img = [[100, 200, 100], [200, 50, 200], [100, 200, 100]]
+class Test219:
+    def test_repetidos(self):
         solucion = Solution()
-        assert solucion.avg_filtro(img, 0, 0) == 137
-
-    def test_solucion(self):
-        img = [[100, 200, 100], [200, 50, 200], [100, 200, 100]]
-        solucion = Solution()
-        assert solucion.imageSmoother(img) == [[137,141,137],[141,138,141],[137,141,137]]
+        assert solucion.containsNearbyDuplicate([1,2,3,1,2,3], 3) == True
+        assert solucion.containsNearbyDuplicate([1,2,3,1,4,5], 3) == False
+        assert solucion.containsNearbyDuplicate([1,2,3], 2) == False
